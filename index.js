@@ -3,6 +3,10 @@ const bot = new Discord.Client();
 
 const token = 'NTc4NzI2MzMyMzAxODM2Mjkx.XN4BMQ.pnUWLUjqQpl3A1hfriQaraJp42I';
 
+const PREFIX = '!';
+
+var version = '1.0.0'
+
 bot.on('ready', () =>{
     console.log('This bot is online!');
 })
@@ -14,10 +18,30 @@ bot.on('guildMemberAdd', member =>{
     channel.send(`Ooo, shiny! ${member} Welcome to Unruly Origins, Nyaah! :heart_eyes_cat: There’s play to be done. Please view the pinned messages from this channel to learn general information about this guild. Let’s run faster! If you're looking to apply, it says how to do so there. Let’s play! :smiley_cat: Tag! You’re it.  `)
 });
 
-bot.on('message', msg=>{
-    if(msg.content === "HELLO"){
-        msg.reply('HELLO FRIEND!');
+bot.on('message', message=>{
+    
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch(args[0]){
+        case 'ping':
+            message.channel.sendMessage('pong!')
+            break;
+        case 'website':
+            message.channel.sendMessage('https://twitter.com/vainglory')
+            break;
+        case 'info':
+            if(args[1] === 'version'){
+                message.channel.sendMessage('Version ' + version);
+            }else{
+                message.channel.sendMessage('Invalid Args')
+            }
+        break;
+        case 'clear':
+            if(!args[1]) return message.reply('Error please define second arg')
+            message.channel.bulkDelete(args[1]);
+        break;
+
     }
 })
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(token);
