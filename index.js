@@ -26,9 +26,6 @@ bot.on('message', message=>{
         case 'ping':
             message.channel.sendMessage('pong!')
             break;
-        case 'saysorry':
-            message.channel.sendMessage('I am sorry everyone for what I did everyone. Bad people took control over me.😿 I know you have it in your hearts to forgive me. I promise this will never ever happen again!😺')
-            break;
         case 'info':
             if(args[1] === 'version'){
                 message.channel.sendMessage('Version ' + version);
