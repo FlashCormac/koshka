@@ -36,11 +36,7 @@ bot.on('message', message=>{
                 message.channel.sendMessage('Invalid Args')
             }
         break;
-        case 'clear':
-            if(!args[1]) return message.reply('Error please define second arg')
-            message.channel.bulkDelete(args[1]);
-        break;
-
+        
     }
 })
 
