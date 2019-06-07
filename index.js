@@ -3,9 +3,9 @@ const bot = new Discord.Client();
 
 const token = 'NTc4NzI2MzMyMzAxODM2Mjkx.XOhH9w.tLwxmW5sI2POVWzl5qsJdyaBJiM';
 
-const PREFIX = '!';
+const PREFIX = 'k!';
 
-var version = '1.0.0'
+var version = 'Pre-Alpha'
 
 bot.on('ready', () =>{
     console.log('This bot is online!');
