@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+const token = 'NTc4NzI2MzMyMzAxODM2Mjkx.XOhH9w.tLwxmW5sI2POVWzl5qsJdyaBJiM';
+
 const PREFIX = '!';
 
 var version = '1.0.0'
