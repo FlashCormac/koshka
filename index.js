@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+process.env.BOT_TOKEN
+
 const PREFIX = 'k!';
 
 var version = 'Pre-Alpha'
